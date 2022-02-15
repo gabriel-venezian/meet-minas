@@ -33,17 +33,123 @@
 	
 	--spacing: 0.25rem;
 	--transition: all 0.2s linear;
-	--dark-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.2);
+	--dark-shadow: 0 .1rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 /**********************************/
 /* 1. General Styles
 /**********************************/
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: var(--ff-primary);
+	background: var(--clr-background);
+}
+
+a {
+	text-decoration: none;
+}
 
 /**********************************/
 /* 2. Navbar
 /**********************************/
+.navbar {
+	position: fixed;
+	background: var(--clr-background);
+	width: 100%;
+	padding: 1.6rem;
+	box-shadow: var(--dark-shadow);
+}
 
+.navbar-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navbar-header__toggle {
+	background: transparent;
+	border: transparent;
+	font-size: 3rem;
+	color: var(--clr-medium-green);
+	cursor: pointer;
+	transition: var(--transition);
+}
+
+.navbar-header__toggle:hover {
+	transform: scale(1.1);
+}
+
+.navbar-list {
+	height: 0;
+	overflow: hidden;
+	transition: var(--transition);
+}
+
+.nabar-list--show-links {
+	height: 25rem;
+}
+
+.navbar-list__link {
+	display: block;
+	font-size: 1.6rem;
+	font-weight: 900;
+	padding: 1.6rem;
+	text-transform: capitalize;
+	color: var(--clr-black);
+	transform: var(--transition);
+}
+
+.navbar-list__link:hover {
+	background: var(--clr-medium-green);
+	padding-left: 3.6rem;
+}
+
+.navbar-icons {
+	display: none;
+}
+
+@media screen and (min-width: 992px) {
+	.navbar-header__toggle {
+		display: none;
+	}
+
+	.navbar-list {
+		height: auto;
+		display: flex;
+	}
+
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: .8rem 1.6rem;
+	}
+
+	.navbar-list__link:hover {
+		background: none;
+		padding-left: 1.6rem;
+		color: var(--clr-medium-green)
+	}
+
+	.navbar-icons {
+		display: flex;
+	}
+
+	.navbar-icons__icon {
+		margin-right: 1.6rem;
+		color: var(--clr-black);
+		font-size: 1.8rem;
+		font-weight: 900;
+		transition: var(--transition);
+	}
+
+	.navbar-icons__icon:hover {
+		color: var(--clr-medium-green);
+	}
+}
 /**********************************/
 /* 3. Hero
 /**********************************/
