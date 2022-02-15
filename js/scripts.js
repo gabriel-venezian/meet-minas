@@ -95,18 +95,6 @@ const prevImage = () => {
 
 }
 
-/**************************************************************************/
-/* As linhas de código abaixo correspondem a um capítulo e um vídeo bônus 
-/* desse projeto. Neste capítulo/vídeo é ensinado como fazer o slider alterar
-/* a imagem apenas arrastando o dedo na tela. 
-/*
-/* Caso deseje adquirir essa parte do projeto acompanhado do código fonte 
-/* completo + código fonte comentado + layout do projeto no Figma, 
-/* acesse o link abaixo:
-/*
-/* https://inkasadev.alumy.com
-/**************************************************************************/
-
 _elements.slider.addEventListener("", e => {
 
 });
