@@ -5,29 +5,29 @@
 }
 
 /**********************************/
-/* 0. Variáveis
-/* 1. Estilos Gerais
+/* 0. Variables
+/* 1. General Styles
 /* 2. Navbar
 /* 3. Hero
-/* 4. Sobre Nós
-/* 5. Diferenciais
-/* 6. Pacotes
+/* 4. About Us
+/* 5. Exclusive
+/* 6. Packages
 /* 7. Newsletter
-/* 8. Galeria
+/* 8. Gallery
 /* 9. Footer
 /* 10. Modal
 /**********************************/
 
 /**********************************/
-/* 0. Variáveis
+/* 0. Variables
 /**********************************/
 
 :root {
 	--ff-primary: "Cairo", sans-serif;
 	
 	--clr-background: 	#F5F5F5;
-	--clr-white: 		#F1FCDE;
-	--clr-black: 		#090E01;
+	--clr-white: 				#F1FCDE;
+	--clr-black: 				#090E01;
 	--clr-light-green: 	#DEF8AF;
 	--clr-medium-green: #88CC11;
 	--clr-dark-green: 	#456809;
@@ -38,7 +38,7 @@
 }
 
 /**********************************/
-/* 1. Estilos Gerais
+/* 1. General Styles
 /**********************************/
 
 
@@ -56,19 +56,19 @@
 
 
 /**********************************/
-/* 4. Sobre Nós
+/* 4. About Us
 /**********************************/
 
 
 
 /**********************************/
-/* 5. Diferenciais
+/* 5. Exclusive
 /**********************************/
 
 
 
 /**********************************/
-/* 6. Pacotes 
+/* 6. Packages 
 /**********************************/
 
 
@@ -80,7 +80,7 @@
 
 
 /**********************************/
-/* 8. Galeria
+/* 8. Gallery
 /**********************************/
 
 
