@@ -52,6 +52,11 @@ a {
 	text-decoration: none;
 }
 
+p {
+	font-size: 1.6rem;
+	line-height: 1.3;
+}
+
 /**********************************/
 /* 2. Navbar
 /**********************************/
@@ -61,6 +66,7 @@ a {
 	width: 100%;
 	padding: 1.6rem;
 	box-shadow: var(--dark-shadow);
+	z-index: 3;
 }
 
 .navbar-header {
@@ -150,10 +156,84 @@ a {
 		color: var(--clr-medium-green);
 	}
 }
+
+@media screen and (min-width: 1170px) {
+	.navbar {
+		padding: .8rem calc((100% - 117rem - 1.6rem) / 2);
+	}
+}
+
 /**********************************/
 /* 3. Hero
 /**********************************/
+.hero {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
 
+.hero__video {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+
+.hero-text {
+	min-width: 37rem;
+	padding: 1.6rem;
+}
+
+.hero-text__title {
+	font-size: 5.2rem;
+	font-weight: 900;
+	color: var(--clr-white);
+	text-transform: uppercase;
+}
+
+.hero-text__description {
+	font-size: 2.4rem;
+	font-weight: 600;
+	color: var(--clr-white);
+	max-width: 57rem;
+	margin: 1rem 0;
+}
+
+.hero-text__cta {
+	display: block;
+	font-size: 3.2rem;
+	font-weight: 600;
+	color: var(--clr-white);
+	width: 25rem;
+	text-align: center;
+	background-color: var(--clr-medium-green);
+	padding: 1.6rem;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	transition: var(--transition);
+}
+
+.hero-text__cta:hover {
+	letter-spacing: .5rem;
+}
+
+@media screen and (min-width: 960px) {
+	.hero-text__title {
+		font-size: 7.2rem;
+	}
+
+	.hero-text__title--line-2 {
+		font-size: 6.4rem;
+	}
+}
+
+@media screen and (min-width: 1170px) {
+	.hero-text {
+		padding: 1.6rem calc((100% - 117rem - 1.6rem) / 2);
+	}
+}
 /**********************************/
 /* 4. About Us
 /**********************************/
