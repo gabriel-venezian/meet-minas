@@ -62,6 +62,10 @@ section {
 	padding: 1.6rem;
 }
 
+section:nth-child(even) {
+	background: var(--clr-light-green);
+}
+
 img {
 	max-width: 100%;
 	height: auto;
@@ -78,6 +82,12 @@ img {
 
 .section__title--emphasis {
 	color: var(--clr-medium-green);
+}
+
+@media screen and (min-width: 625px) {
+	section:nth-child(even) {
+		padding: 5.6rem 0 5.6rem 0;
+	}
 }
 
 @media screen and (min-width: 1170px) {
@@ -301,10 +311,62 @@ img {
 	}
 }
 /**********************************/
-/* 5. Exclusive
+/* 5. Exclusives
 /**********************************/
+.exclusives {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
+.exclusive + .exclusive {
+	margin-top: 1.6rem;
+}
 
+.exclusive__title {
+	font-size: 2.4rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+}
+
+.exclusive__description {
+	width: 28.8rem;
+}
+
+.exclusive__title::before {
+	content: "";
+	background-color: var(--clr-black);
+	color: var(--clr-white);
+	padding: 1rem;
+	margin-right: .8rem;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 3.6rem;
+}
+
+.exclusive__title--wallet::before {
+	content: "\f555";
+}
+
+.exclusive__title--location::before {
+	content: "\f5a0";
+}
+
+.exclusive__title--socks::before {
+	content: "\f696";
+}
+
+@media screen and (min-width: 625px) {
+	.excusives {
+		justify-content: space-between;
+	}
+
+	.exclusive + .exclusive {
+		margin-top: 0;
+	}
+}
 
 /**********************************/
 /* 6. Packages 
