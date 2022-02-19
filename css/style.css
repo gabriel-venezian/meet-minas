@@ -371,8 +371,105 @@ img {
 /**********************************/
 /* 6. Packages 
 /**********************************/
+.packages {
+	display: flex;
+	position: relative;
+	overflow-x: auto;
+}
 
+.packages::after {
+	content: "→";
+	position: absolute;
+	font-size: 4rem;
+	font-weight: 900;
+	color: red;
+	top: .5rem;
+	right: 5.2rem;
+	animation: arrow .7s ease-in 0s infinite alternate;
+}
 
+@keyframes arrow {
+	from {
+		right: 1rem;
+	}
+	to {
+		right: 2rem;
+	}
+	
+}
+
+.package + .package {
+	margin-left: 3rem;
+}
+
+.package {
+	flex-shrink: 0;
+	background-color: var(--clr-light-green);
+	max-width: 37rem;
+	cursor: pointer;
+	box-shadow: var(--dark-shadow);
+}
+
+.package__info {
+	padding: 1.6rem;
+}
+
+.info-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.info-header__title {
+	font-size: 2.4rem;
+	font-weight: 600;
+}
+
+.info-body {
+	margin: 1.6rem 0;
+}
+
+.info-footer {
+	display: flex;
+	font-size: 1.6rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media screen and (min-width: 805px) {
+	.packages {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		overflow: visible;
+		padding-bottom: 3.2rem;
+	}
+
+	.package {
+		transition: var(--transition);
+	}
+
+	.package:hover {
+		transform: scale(1.02);
+	}
+
+	.packages::after {
+		content: "";
+	}
+
+	.package + .package {
+		margin: 0;
+	}
+
+	.package:nth-child(n + 3) {
+		margin-top: 3rem;
+	}
+}
+
+@media screen and (min-width: 1150px) {
+	.package:nth-child(3) {
+		margin-top: 0;
+	}
+}
 
 /**********************************/
 /* 7. Newsletter
