@@ -84,12 +84,6 @@ img {
 	color: var(--clr-medium-green);
 }
 
-@media screen and (min-width: 625px) {
-	section:nth-child(even) {
-		padding: 5.6rem 0 5.6rem 0;
-	}
-}
-
 @media screen and (min-width: 1170px) {
 	section {
 		padding: 1.6rem calc((100% - 117rem - 1.6rem) / 2);
@@ -255,7 +249,7 @@ img {
 }
 
 .hero-text__cta:hover {
-	letter-spacing: .5rem;
+	letter-spacing: .3rem;
 }
 
 @media screen and (min-width: 960px) {
@@ -474,8 +468,82 @@ img {
 /**********************************/
 /* 7. Newsletter
 /**********************************/
+.newsletter-content {
+	padding: 4rem 0;
+}
 
+.newsletter-info__title {
+	font-size: 2.8rem;
+	font-weight: 600;
+}
 
+.newsletter-info__signup {
+	font-size: 2.4rem;
+	font-weight: 300;
+	font-style: italic;
+	line-height: 1.2;
+	margin: .8rem 0;
+}
+
+.newsletter-form {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.newsletter-form__input {
+	flex: 3 1 37rem;
+	font-size: 1.8rem;
+	height: 4rem;
+	color: var(--clr-black);
+	border: none;
+	padding: 1rem;
+	border-radius: 0;
+}
+
+.newsletter-form__submit {
+	flex: 1;
+	font-size: 2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	background: var(--clr-medium-green);
+	color: var(--clr-white);
+	cursor: pointer;
+	border: none;
+	letter-spacing: .2rem;
+	padding: 1.6rem;
+	transition: var(--transition);
+}
+
+.newsletter-form__submit:hover {
+	letter-spacing: .3rem;
+}
+
+@media screen and (min-width: 570px) {
+	.newsletter-content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.newsletter-info, .newsletter-form {
+		flex: 1 1 26rem;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.newsletter-form__input {
+		flex: 1;
+		height: auto;
+		margin-right: 3rem;
+	}
+}
+
+@media screen and (min-width: 1170px) {
+	.newsletter-form__input {
+		flex: 2;
+	}
+}
 
 /**********************************/
 /* 8. Gallery
