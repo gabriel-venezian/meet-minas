@@ -69,6 +69,7 @@ section:nth-child(even) {
 img {
 	max-width: 100%;
 	height: auto;
+	display: block;
 }
 
 .section__title {
@@ -548,8 +549,73 @@ img {
 /**********************************/
 /* 8. Gallery
 /**********************************/
+.gallery {
+	padding: 0;
+}
 
+.gallery-item {
+	position: relative;
+	min-width: 17rem;
+	cursor: pointer;
+	overflow: hidden;
+}
 
+.gallery-item__thumb {
+	transform: var(--transition);
+}
+
+.gallery-item::before {
+	content: "";
+	position: absolute;
+	background-color: var(--clr-black);
+	opacity: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	transition: var(--transition);
+}
+
+.gallery-item__location {
+	position: absolute;
+	font-size: 2.4rem;
+	font-weight: 600;
+	left: 6.4rem;
+	bottom: 3.2rem;
+	color: var(--clr-white);
+	opacity: 0;
+	z-index: 2;
+	transition: var(--transition);
+}
+
+.gallery-item:hover .gallery-item__thumb {
+	transform: scale(1.2);
+}
+
+.gallery-item:hover .gallery-item__location {
+	left: 3.2rem;
+	opacity: 1;
+}
+
+.gallery-item:hover.gallery-item::before {
+	opacity: .7;
+}
+
+@media screen and (min-width: 768px) {
+	.gallery {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.gallery-item {
+		flex: 0 0 50%;;
+	}
+}
+
+@media screen and (min-width: 960px) {
+	.gallery-item {
+		flex: 0 0 25%;
+	}
+}
 
 /**********************************/
 /* 9. Footer
