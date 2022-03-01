@@ -334,6 +334,7 @@ img {
 
 .exclusive__description {
 	width: 28.8rem;
+	margin-top: .8rem;
 	margin-bottom: 1.6rem;
 }
 
@@ -475,7 +476,11 @@ img {
 
 @media screen and (max-width: 550px) {
 	.package {
-		max-width: 90vw;
+		max-width: 85vw;
+	}
+
+	.section__title {
+		text-align: center;
 	}
 }
 /**********************************/
