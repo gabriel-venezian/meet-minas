@@ -55,12 +55,7 @@ a {
 
 p {
 	font-size: 1.6rem;
-	line-height: 1.3;
-}
-
-section {
-	min-width: 37rem;
-	padding: 1.6rem;
+	line-height: 1.5;
 }
 
 section:nth-child(even) {
@@ -277,6 +272,10 @@ img {
 /**********************************/
 /* 4. About Us
 /**********************************/
+.about {
+	padding: 1.6rem;
+}
+
 .about-text {
 	margin-top: 1.6rem;
 }
@@ -288,7 +287,7 @@ img {
 	margin-bottom: .8rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
 	.about-content {
 		display: flex;
 		flex-wrap: wrap;
@@ -311,6 +310,13 @@ img {
 		height: 100vh;
 	}
 }
+
+@media screen and (min-width: 610px) {
+	.about-content__img {
+		margin: auto;
+	}
+} 
+
 /**********************************/
 /* 5. Exclusives
 /**********************************/
@@ -330,6 +336,7 @@ img {
 	text-transform: uppercase;
 	display: flex;
 	align-items: center;
+	margin-top: 1rem;
 }
 
 .exclusive__description {
@@ -371,6 +378,12 @@ img {
 	}
 }
 
+@media screen and (min-width: 625px) {
+	.exclusives {
+    justify-content: space-between;
+	}
+}
+
 /**********************************/
 /* 6. Packages 
 /**********************************/
@@ -378,6 +391,8 @@ img {
 	display: flex;
 	position: relative;
 	overflow-x: auto;
+	padding: 1.6rem;
+	margin-bottom: .8rem;
 }
 
 .packages::after {
@@ -386,17 +401,17 @@ img {
 	font-size: 4rem;
 	font-weight: 900;
 	color: red;
-	top: .5rem;
+	top: 1.6rem;
 	right: 5.2rem;
 	animation: arrow .7s ease-in 0s infinite alternate;
 }
 
 @keyframes arrow {
 	from {
-		right: 1rem;
+		right: 4.5rem;
 	}
 	to {
-		right: 2rem;
+		right: 6rem;
 	}
 	
 }
@@ -487,7 +502,7 @@ img {
 /* 7. Newsletter
 /**********************************/
 .newsletter-content {
-	padding: 4rem 0;
+	padding: 1.6rem
 }
 
 .newsletter-info__title {
@@ -542,6 +557,7 @@ img {
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+		padding: 1.6rem;
 	}
 }
 
