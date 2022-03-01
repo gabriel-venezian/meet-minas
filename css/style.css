@@ -334,6 +334,7 @@ img {
 
 .exclusive__description {
 	width: 28.8rem;
+	margin-bottom: 1.6rem;
 }
 
 .exclusive__title::before {
@@ -472,6 +473,11 @@ img {
 	}
 }
 
+@media screen and (max-width: 550px) {
+	.package {
+		max-width: 90vw;
+	}
+}
 /**********************************/
 /* 7. Newsletter
 /**********************************/
