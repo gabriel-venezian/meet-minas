@@ -1,9 +1,10 @@
 # Meet Minas
+
+Landing page simulating a travel agency focused in Minas Gerais.
+
 <a href="https://gabriel-venezian.github.io/meet-minas">
   <img src="./assets/img/screenshot.jpg" alt="Project screenshot">
 </a>
-
-Landing page simulating a travel agency focused in Minas Gerais.
 
 ## View Result
 
