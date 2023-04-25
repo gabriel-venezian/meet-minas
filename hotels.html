@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels | Home</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+		integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		referrerpolicy="no-referrer" />
+	<link rel="icon" href="./assets/icons/icon.svg">
+	<link rel="stylesheet" href="css/style.css">
+    <style>
+        body{
+            background: url(/assets/img/hotels1.jpeg);
+        }
+        input,::placeholder{
+            color: black;
+            padding: 20px;
+            font-size: x-large;
+            margin: 10px;
+            background-color: white;
+            border-radius: 15px;
+            width: 400px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar-list">
+        <li>
+            <a href="/index.html" class="navbar-list__link">About</a>
+        </li>
+        <li>
+            <a href="/index.html" class="navbar-list__link">Exclusive</a>
+        </li>
+        <li>
+            <a href="/index.html" class="navbar-list__link">Packages</a>
+        </li>
+        <li>
+            <a href="/index.html" class="navbar-list__link">Gallery</a>
+        </li>
+        <li>
+            <a href="payment.html" class="navbar-list__link">Payment</a>
+        </li>
+
+        <li>
+            <a href="travel.html" class="navbar-list__link">Travel</a>
+        </li>
+    </ul>
+<!--     
+    <script>
+            
+        const urlParams = new URLSearchParams(window.location.search);
+const location = urlParams.get('location');
+
+// Use the location name to display relevant information
+document.getElementById('location-name').textContent = location;
+        </script> -->
+        
+        <input type="text" id="location" placeholder="Location" style="color: black;" required>
+        <input type="date" >
+        <input type="text" placeholder="Number of Days" >
+        <button onclick="redirectToPayment()">Next</button>
+        <script>
+            function redirectToPayment() {
+                var location = document.getElementById("location").value;
+                window.location.href = location + '.html';
+            }
+        </script>
+</body>
+</html>

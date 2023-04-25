@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <title>payment portal</title>
+    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    referrerpolicy="no-referrer" />
+<link rel="icon" href="./assets/icons/icon.svg">
+<link rel="stylesheet" href="css/style.css">
+    <style>
+        .address{
+            color: blueviolet;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #8b3b3b;
+            border-radius: 30px;
+            background-color: #FEE8B0;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .row label {
+            font-weight: bold;
+        }
+        .row span {
+            color: #555;
+        }
+        .payment-options {
+            margin-top: 20px;
+        }
+        .payment-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .payment-option input[type="radio"] {
+            margin-right: 10px;
+        }
+                .pay-button {
+            display: block;
+            width: 30%;
+            margin: 20px auto 0;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pay-button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="navbar-list">
+        <li>
+            <a href="#about" class="navbar-list__link">About</a>
+        </li>
+        <li>
+            <a href="#exclusive" class="navbar-list__link">Exclusive</a>
+        </li>
+        <li>
+            <a href="#packages" class="navbar-list__link">Packages</a>
+        </li>
+        <li>
+            <a href="#gallery" class="navbar-list__link">Gallery</a>
+        </li>
+        <li>
+            <a href="payment.html" class="navbar-list__link">Payment</a>
+        </li>
+        
+        <li>
+            <a href="travel.html" class="navbar-list__link">Travel</a>
+        </li>
+    </ul>
+    <div class="container">
+    <form action="">
+        <h1 style="text-align: center;">Details</h1>
+        
+    <div class="container">
+        <div class="row">
+            <label for="from">From:</label>
+            <span id="from"></span>
+        </div>
+        <div class="row">
+            <label for="to">To:</label>
+            <span id="to"></span>
+        </div>
+        <div class="row">
+            <label for="time">Time:</label>
+            <span id="time"></span>
+        </div>
+        <div class="row">
+            <label for="date">Date:</label>
+            <span id="date"></span>
+        </div>
+    </div>
+
+    <script>
+        // get inputs from query parameter
+        var urlParams = new URLSearchParams(window.location.search);
+        var from = urlParams.get("from");
+        var to = urlParams.get("to");
+        var time = urlParams.get("time");
+        var date = urlParams.get("date");
+
+        // display inputs
+        document.getElementById("from").textContent = from;
+        document.getElementById("to").textContent = to;
+        document.getElementById("time").textContent = time;
+        document.getElementById("date").textContent = date;
+    </script>
+    
+    <h1>Payment</h1>
+
+    <div class="container">
+        <div class="row">
+            <label for="total">Cost:</label>
+            <span id="total"></span>
+        </div>
+        <div class="row">
+            <label for="tax">Tax (18%):</label>
+            <span id="tax"></span>
+        </div>
+        <div class="row">
+            <label for="final">Total Amount:</label>
+            <span id="final"></span>
+        </div>
+
+        <div class="billing-address">
+            <h2>Billing Address</h2>
+            <div class="row">
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+            <div class="row">
+                <label for="address">Address:</label>
+                <input type="text" id="address">
+            </div>
+            <div class="row">
+                <label for="city">City:</label>
+                <input type="text" id="city">
+            </div>
+            <div class="row">
+                <label for="state">State:</label>
+                <input type="text" id="state">
+            </div>
+            <div class="row">
+                <label for="zip">Zip Code:</label>
+                <input type="text" id="zip">
+            </div>
+        </div>
+
+        <div class="payment-options">
+            <h2>Payment Options</h2>
+            <div class="payment-option">
+                <input type="radio" name="payment-option" value="net-banking" onclick="location.href='banking.html'"> Net Banking
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+
+</div>
+
+<a href="index.html">Go Back</a>
+</body>
+</html>

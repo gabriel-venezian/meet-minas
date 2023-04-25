@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trains | Proceed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .row label {
+            font-weight: bold;
+        }
+        .row span {
+            color: #555;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Trains | Proceed</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <label for="from">From:</label>
+            <span id="from"></span>
+        </div>
+        <div class="row">
+            <label for="to">To:</label>
+            <span id="to"></span>
+        </div>
+        <div class="row">
+            <label for="time">Time:</label>
+            <span id="time"></span>
+        </div>
+        <div class="row">
+            <label for="date">Date:</label>
+            <span id="date"></span>
+        </div>
+    </div>
+
+    <script>
+        // get inputs from query parameter
+        var urlParams = new URLSearchParams(window.location.search);
+        var from = urlParams.get("from");
+        var to = urlParams.get("to");
+        var time = urlParams.get("time");
+        var date = urlParams.get("date");
+
+        // display inputs
+        document.getElementById("from").textContent = from;
+        document.getElementById("to").textContent = to;
+        document.getElementById("time").textContent = time;
+        document.getElementById("date").textContent = date;
+    </script>
+</body>
+</html>

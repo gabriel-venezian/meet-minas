@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights | Home</title>
+    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    referrerpolicy="no-referrer" />
+<link rel="icon" href="./assets/icons/icon.svg">
+<link rel="stylesheet" href="css/style.css">
+    <style>
+
+        body{
+            background: url(flights1.jpeg);
+            margin: 40px;
+        }
+        
+        input,::placeholder{
+            font-size: x-large;
+            color: black;
+            padding: 20px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 15px;
+            width: 400px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+        .button:hover {
+            background-color: #3e8e41;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+        h1,label{
+            font-size: xx-large;
+        }
+        #option{
+            
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="navbar-list">
+        <li>
+            <a href="#about" class="navbar-list__link">About</a>
+        </li>
+        <li>
+            <a href="#exclusive" class="navbar-list__link">Exclusive</a>
+        </li>
+        <li>
+            <a href="#packages" class="navbar-list__link">Packages</a>
+        </li>
+        <li>
+            <a href="#gallery" class="navbar-list__link">Gallery</a>
+        </li>
+        <li>
+            <a href="payment.html" class="navbar-list__link">Payment</a>
+        </li>
+        
+        <li>
+            <a href="travel.html" class="navbar-list__link">Travel</a>
+        </li>
+    </ul>
+    <input type="text" id="from" placeholder="From Location">
+    <input type="text" id="to" placeholder="To Destination">
+    <input type="time" id="time" placeholder="Time">
+    <input type="date" id="date">
+    <h1>Flight Options</h2>
+    <label for="flights">Choose a flight:</label>
+    <select id="flights" onchange="showFare()">
+        <option value="" id="option">--Please choose an option--</option>
+        <option value="10,000">Indigo</option>
+        <option value="20,000">Air Asia</option>
+        <option value="30,000">Emirates</option>
+    </select>
+    <p id="fare"></p>
+
+    <script>
+        function showFare() {
+            var fare = document.getElementById("flights").value;
+            if (fare) {
+                document.getElementById("fare").innerHTML = "Fare: ₹ " + fare;
+            } else {
+                document.getElementById("fare").innerHTML = "";
+            }
+        }
+    </script>
+    </ul>
+    <a href="#" class="button" id="proceed-button">Proceed</a>
+
+    <script>
+        document.getElementById("proceed-button").addEventListener("click", function() {
+            // get input values
+            var from = document.getElementById("from").value;
+            var to = document.getElementById("to").value;
+            var time = document.getElementById("time").value;
+            var date = document.getElementById("date").value;
+
+            // redirect to proceed.html with inputs as query parameters
+            window.location.href = "payment1.html?from=" + from + "&to=" + to + "&time=" + time + "&date=" + date;
+        });
+    </script>
+    
+</body>
+</html>
